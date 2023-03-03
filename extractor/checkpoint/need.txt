@@ -1,0 +1,2 @@
+1.vocab.pkl
+2.anchored_topic_model.pkl
