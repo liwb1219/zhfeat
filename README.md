@@ -7,25 +7,25 @@ from extractor.feat_extractor import Extractor
 import re
 
 
-"""Input text, separated by "#" between paragraphs"""
-text = """人有两件，双手和大脑，双手会做工，大脑会思考。#用手不用脑，事情做不好，用脑不用手，啥也办不到，用手又用脑，才能有创造。一切创造靠劳动，劳动要用手和脑。"""
+# Input text, separated by "#" between paragraphs
+text = """人有两件，双手和大脑，双手会做工，大脑会思考。#用手不用脑，事情做不好，用脑不用手，啥也办不到，用手又用脑，才能有创造。"""
 
 
-""" (1) Only need character, word, sentence and paragraph features """
+# (1) Only need character, word, sentence and paragraph features
 zh_extractor = Extractor(is_topic_features=False)
 chinese_linguistic_features = zh_extractor.extract_chinese_linguistic_features(text)
 print('chinese linguistic features:', chinese_linguistic_features)
 print('features num:', len(chinese_linguistic_features))
 
 
-""" (2) Also Need topic features """
+# (2) Also Need topic features
 zh_extractor = Extractor(is_topic_features=True)
 chinese_linguistic_features = zh_extractor.extract_chinese_linguistic_features(text)
 print('chinese linguistic features:', chinese_linguistic_features)
 print('features num:', len(chinese_linguistic_features))
 
 
-""" (3) Extract separately """
+# (3) Extract separately
 zh_extractor = Extractor(is_topic_features=True)
 filtered_text = re.sub(r'\s+|\r|#', '', text)
 paragraph_text = re.sub(r'\s+|\r', '', text)
