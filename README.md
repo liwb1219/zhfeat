@@ -6,10 +6,8 @@
 from extractor.feat_extractor import Extractor
 import re
 
-
 # Input text, separated by "#" between paragraphs
 text = """人有两件，双手和大脑，双手会做工，大脑会思考。#用手不用脑，事情做不好，用脑不用手，啥也办不到，用手又用脑，才能有创造。"""
-
 
 # (1) Only need character, word, sentence and paragraph features
 zh_extractor = Extractor(is_topic_features=False)
@@ -17,13 +15,11 @@ chinese_linguistic_features = zh_extractor.extract_chinese_linguistic_features(t
 print('chinese linguistic features:', chinese_linguistic_features)
 print('features num:', len(chinese_linguistic_features))
 
-
 # (2) Also Need topic features
 zh_extractor = Extractor(is_topic_features=True)
 chinese_linguistic_features = zh_extractor.extract_chinese_linguistic_features(text)
 print('chinese linguistic features:', chinese_linguistic_features)
 print('features num:', len(chinese_linguistic_features))
-
 
 # (3) Extract separately
 zh_extractor = Extractor(is_topic_features=True)
@@ -39,4 +35,20 @@ print('word features:', word_features)
 print('sentence features:', sentence_features)
 print('paragraph features:', paragraph_features)
 print('topic features:', topic_features)
+```
+
+# Citation
+```
+@inproceedings{li-etal-2022-unified,
+    title = "A Unified Neural Network Model for Readability Assessment with Feature Projection and Length-Balanced Loss",
+    author = "Li, Wenbiao  and
+      Ziyang, Wang  and
+      Wu, Yunfang",
+    booktitle = "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing",
+    month = dec,
+    year = "2022",
+    address = "Abu Dhabi, United Arab Emirates",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.emnlp-main.504",
+    pages = "7446--7457"}
 ```
