@@ -1,4 +1,4 @@
-# zhfeat
+# zhfeat: A Toolkit for Extracting Chinese Linguistic Features
 
 
 # Usage
