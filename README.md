@@ -1,7 +1,7 @@
 # zhfeat: A Toolkit for Extracting Chinese Linguistic Features
 
 
-# Usage
+## Usage
 If you need topic features, please click the link https://disk.pku.edu.cn:443/link/CC30242BAFC6A7E930D4CB8515B5263E download the pre-trained model and put it in the checkpoint folder.
 ```python
 from extractor.feat_extractor import Extractor
@@ -38,7 +38,10 @@ print('paragraph features:', paragraph_features)
 print('topic features:', topic_features)
 ```
 
-# Citation
+## Feature Definition
+
+
+## Citation
 ```
 @inproceedings{li-etal-2022-unified,
     title = "A Unified Neural Network Model for Readability Assessment with Feature Projection and Length-Balanced Loss",
