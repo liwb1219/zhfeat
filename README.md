@@ -40,6 +40,7 @@ print('topic features:', topic_features)
 
 ## Feature Definition
 | Idx | Dim | Feature description |
+|---|---|---|
 | 1   | 1   | Total number of characters |
 
 ## Citation
