@@ -123,8 +123,9 @@ print('topic features:', topic_features)
 | 80 | 段 | 段落最大词语数 | 1 | 段落所含词数的最大值 |
 | 81 | 主题 | 难度感知的主题特征 | 160 | 其中一半主题锚定难度词汇 |
 
-## Retrain the corex model
-If you want to retrain the corex model yourself, please refer to https://github.com/liwb1219/PTM-FP-LBL/tree/main/features-main.
+## Retrain the corex model yourself
+cd BERT-FP-LBL/features-main
+python run_corex.py
 
 ## Citation
 ```
