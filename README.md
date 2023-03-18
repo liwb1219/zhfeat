@@ -124,8 +124,10 @@ print('topic features:', topic_features)
 | 81 | 主题 | 难度感知的主题特征 | 160 | 其中一半主题锚定难度词汇 |
 
 ## Retrain the corex model yourself
+```python
 cd BERT-FP-LBL/features-main
 python run_corex.py
+```
 
 ## Citation
 ```
